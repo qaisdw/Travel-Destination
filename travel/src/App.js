@@ -1,9 +1,10 @@
 import HomeFun from "./components/home/Home";
+const travelData = require("./data/db.json")
 
 function App() {
   return (
     <>
-    <HomeFun/>
+    <HomeFun data={travelData}/>
     </>
   );
 }
