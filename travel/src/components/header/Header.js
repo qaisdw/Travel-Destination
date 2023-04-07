@@ -1,6 +1,8 @@
+import "./Header.css"
+
 function HeaderFun(){
     return(
-        <h1>Travel-app</h1>
+        <h1>Welcome To Travel-Site</h1>
     );
 }
 
