@@ -1,12 +1,19 @@
-
+import { Link } from "react-router-dom";
+import "./Tours.css"
+import TourFun from "./tour/Tour"
 
 function ToursFun(props){
     return (
-        <div>
-            <h2>{props.travel_name}</h2>
-            <img src={props.travel_img}  alt={props.travel_name} />
-        </div>
-    );
+        
+    props.data.map(element =>{
+        return(
+            <div key={element.id}>
+                <Link to={`/city/${element.id}`}>
+                    <TourFun travel_name={element.name}  travel_img={element.image}/>
+                </Link>
+            </div>
+        )
+    }));
 }
 
 export default ToursFun;

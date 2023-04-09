@@ -1,10 +1,15 @@
 import HomeFun from "./components/home/Home";
+import { Routes, Route } from "react-router-dom";
+import TourDital from "./components/TourDetails/TourDetails";
 const travelData = require("./data/db.json")
 
 function App() {
   return (
     <>
-    <HomeFun data={travelData}/>
+    <Routes>
+      <Route path="/" element={<HomeFun data={travelData}/>} />
+      <Route path="/city/:id" element={<TourDital data={travelData}/>} />
+    </Routes>
     </>
   );
 }
